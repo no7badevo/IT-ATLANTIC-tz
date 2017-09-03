@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul { list-style: none; }
+
+.show {
+    display: block !important;
+    visibility: visible;
+    animation: hide .6s;
+}
+
+.visible {
+    animation: hide .5s ease-in-out;
+    visibility: visible !important;
+}
+
+@keyframes hide {
+    0% {
+        opacity: .4;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu {
+    display: flex;
+    width: 70vw;
+    margin: 40px auto;
+    position: relative;
+}
+
+.menu li > a {
+    width: 210px;
+    display: flex;
+    height: 50px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, .25);
+}
+
+.menu li > a:hover {
+    background: rgba(0, 0, 0, .07);
+    transition: background .2s linear;
+}
+
+#ru-kitchen-btn,
+#uk-kitchen-btn,
+#kavkaz-kitchen-btn,
+#asia-kitchen-btn {
+    opacity: .75;
+    border-right: none;
+}
+
+#asia-kitchen-btn {
+    border-right: 1px solid rgba(0, 0, 0, .25);
+}
+
+.ru-kitchen,
+.uk-kitchen,
+.kavkaz-kitchen {
+    display: none;
+}
+
+#ru-kitchen-btn { position: relative;}
+
+.settings {
+    width: 50px;
+    height: 50px;
+    background: url(../img/settings.png) center no-repeat;
+    border: 1px solid rgba(0, 0, 0, .25);
+    border-right: none;
+    cursor: pointer;
+    opacity: .75;
+}
+
+.settings:hover {
+    background: url(../img/settings.png) center no-repeat rgba(0, 0, 0, .07);
+    opacity: .9;
+    transition: opacity .3s linear;
+}
+
+.settings-menu {
+    height: 110px;
+    padding: 10px;
+    width: 320px;
+    border: 1px solid rgba(0, 0, 0, .25);
+    visibility: hidden;
+}
+
+
+.settings-menu > p {
+    line-height: 20px;
+    margin-bottom: 15px;
+    font-size: .9em;
+    opacity: .55;
+}
+
+label {
+    line-height: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    user-select: none;
+    opacity: .65;
+}
+
+input[type='checkbox'] {
+    position: relative;
+    margin-right: 10px;
+    line-height: 14px;
+    opacity: .8;
+    font-size: 25px;
+    cursor: pointer;
+    left: 10px;
+}
+
+input[type='checkbox']:before {
+    position: absolute;
+    top: -4px;
+    left: -1px;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border: 1px solid #626262;
+    background: #ddd;
+}
+
+input[type='checkbox']:checked:before {
+    content: "✔";
+    color: #3f8cff;
+}
+
+input[type='checkbox']:hover:before {
+    border: 1px solid #40A5C6;
+}
